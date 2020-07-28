@@ -1,0 +1,93 @@
+extends layout
+
+block content
+  mixin row(goodsLink, categoryLink, imageLink, categoryName, goodsName, description)
+    tr
+      td(align="center" valign="top" style="padding-bottom: 20px;")
+        table(width="400")
+          tr
+            td(align="center" valign="top")
+              a(href=goodsLink target="_blank")
+                img(src=imageLink width="200")
+          tr
+            td(align="center" style="font-family: 'Nanum Gothic', sans-serif; font-weight: bold; font-size: 13px; padding-top: 5px;")
+              a(href=categoryLink target="_blank" style="text-decoration: none; color: orange;")=categoryName 
+          tr
+            td(align="center" valign="top" style="font-family: 'Muli', sans-serif; font-weight: 500; font-size: 16px; padding: 10px 0;")
+              a(href=goodsLink target="_blank" style="text-decoration: none; color: #000;")=goodsName 
+          tr
+            td(align="center" valign="top" style="font-family: 'Nanum Gothic', sans-serif; font-weight: 300; font-size: 13px;")
+              a(href=goodsLink target="_blank" style="text-decoration: none; color: #000; line-height: 20px;")=description 
+
+  table(align="center" valign="top" width="600" style="")
+    tr
+      td(align="center" valign="top" style="padding-bottom: 30px;")
+        a(href="http://s.godo.kr/k28m" target="_blank")
+          img(src="https://designbook-images.s3.ap-northeast-2.amazonaws.com/logo.png" width="110")
+
+    +row("http://s.godo.kr/mjvs",
+      "http://s.godo.kr/k28s",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/brand.jpg",
+      "종합그래픽",
+      "BranD vol.49 From Work to Artwork：Break Design Limits",
+      "BranD vol.49의 주제는 'From Work to Artwork：Break Design Limits'입니다.")
+    +row("http://s.godo.kr/mjvv",
+      "http://s.godo.kr/k28s",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/keep.jpg",
+      "종합그래픽",
+      "Keep in Touch : Contemporary Design for Invitation, Postcards, Stamps & Seals",
+      "사랑하는 사람들을 특별한 날에 초대하기 위한, 회사 런칭파티에 고객들을 끌어들이기 위한 매력적인 디자인의 초대장 등 디자인에 초점을 맞춘 이벤트 및 테마, 세련되고 현대적이거나 다채로운 디자인으로 꾸며져 있는 서적입니다.  ")
+    +row("http://s.godo.kr/mjvy",
+      "http://s.godo.kr/mjw6",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/optimum.jpg",
+      "BI,CI,LOGO / 타이포",
+      "Optimum Type : Custom Typography Design and Application",
+      "전 세계 디자이너와 기획사로부터 100종 이상의 창의적인 맞춤 제작 타이포들을 다루고 있습니다.")
+    +row("http://s.godo.kr/mjw2",
+      "http://s.godo.kr/mjw6",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/tokyo.jpg",
+      "BI,CI,LOGO / 타이포",
+      "Tokyo TDC, Vol.30 The Best in International Typography & Design",
+      "일본 특유의 타이포그라피를 보실수있는 서적으로 포스터, 패키지, 인쇄물 가릴 것 없이 다양한 방면에서 쓰인 우수한 타이포그라피 사례들을 확인하실수 있으며 오랜시간 동안 사랑받아온 만큼 구성이 알찬 서적입니다")
+    +row("http://s.godo.kr/mjwo",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/salon.jpg",
+      "건축 / 인테리어",
+      "THE BEAUTY SALON DESIGN",
+      "미용실과 에스테틱 샵 107점의 실내 인테리어를 모은 책입니다. 신규, 리모델링, 경영 참고 자료로 유용한 살롱계의 설계 및 인테리어 디자인은 담았습니다.")
+    +row("http://s.godo.kr/mjx5",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/garden.jpg",
+      "건축 / 인테리어",
+      "The Gardens of Eden",
+      "교외와 시골뿐만 아니라 작은 테라스와 도시 옥상에 만들어진 에덴의 혁신적인 작은 정원을 보여줍니다. 오늘날의 정원사들은 가든에 장식적인 것을 창조합니다. 식물과 곤충을 위한 다양하고 풍부한 환경을 만들거나, 도시에서 야채나 과일을 직접 재배하는 등 보다 상상력이 풍부하고 다양하며 도시 지역 내에서 친환경적인 코너를 설계하는 방법을 담았습니다.")
+    +row("http://s.godo.kr/mjy0",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/furniture.jpg",
+      "건축 / 인테리어",
+      "Furniture in Architecture: The Work of Luke Hughes – Arts & Crafts in the Digital Age",
+      "사진과 그림으로 묘사된 이 책은 오늘날 가장 영감을 주는 가구 디자이너의 대한 깊이 있는 조사가 담겨있습니다. 상업적으로 실용적이며 환경적으로 지속 가능한 그들의 작품은 뉴욕의 예일대학교 경영 및 회교에서 웨스트민스터 사원, 런던 타워, 옥스포드 및 캠브리지 대학 ,베이징의 키스톤 아카데미 까지 세계에서 가장 유명한 많은 건물들을 제공합니다.")
+    +row("http://s.godo.kr/mjy3",
+      "http://s.godo.kr/k293",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/chanel.jpg",
+      "패션",
+      "Goude: The Chanel Sketchbooks",
+      "샤넬과 장 폴 구드 (Jean-Paul Goude)와의 샤넬 향수 켐페인의 스케치와 그림을 처음으로 공개한 이 책은 '코코'부터 '샤넬 넘버5'에 이르는 샤넬 향수에 대한 구드의 작품을 공개합니다. 샤넬 애호가들에게 꼭 필요한 이 책은 크리에이티브, 광고 디자이너에게 샤넬 이미지 뒤에 숨은 상상력과 창조적 과정을 발견할 수 있게 합니다.")
+    +row("http://s.godo.kr/mjy8",
+      "http://s.godo.kr/k293",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/hermes.jpg",
+      "패션",
+      "Hermes: Heavenly Days",
+      "세계적인 럭셔리 브랜드 Hermès는 브랜드의 창조성을 극대화하기 하기 위해 매년 새로운 테마를 선택하여 그들의 제품을 선보입니다. 이번 컬렉션은 차빈의 콜라보레이션 작품 300점과 함께 책장이나 카페 디스플레이에 완벽하게 어울리는 오렌지북으로 돌아왔습니다. 북극 크리스마스부터 파리의 거리에서의 봄까지, 모든 연령의 독자들을 미소짓게 하는 책입니다.")
+    +row("http://s.godo.kr/mjyc",
+      "http://s.godo.kr/k293",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202007/dali.jpg",
+      "아트",
+      "Dali. The Paintings",
+      "이 무게감 있는 서적은 지금까지 출판된 달리의 그림 작품 중 가장 완벽한 책입니다. 수년간의 연구 끝에 Robert Descharnes and Gilles Néret는 수년간 접근하기 힘들었던 마스터의 그림 작품을 찾아냈으며, 거의 절반에 가까운 삽화는 처음으로 공개됩니다. 본 서적은 발레, 영화, 패션, 광고 등 작품 속 다른 면의 글과 그림에서부터 재료에 이르기까지 달리의 전 작품을 엿볼 수 있습니다.")
+
+
+
+
+
+
