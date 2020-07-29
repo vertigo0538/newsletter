@@ -4,9 +4,9 @@
   "description": "디자인북 뉴스레터",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.pug",
+    "dev": "parcel index.pug",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel src/index.pug"
+    "build": "parcel index.pug"
   },
   "keywords": [],
   "author": "",
