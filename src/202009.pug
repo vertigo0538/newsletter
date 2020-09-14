@@ -1,0 +1,100 @@
+extends layout
+
+block content
+  mixin row(goodsLink, categoryLink, imageLink, categoryName, goodsName, description)
+    tr
+      td(align="center" valign="top" style="padding-bottom: 20px;")
+        table(width="400")
+          tr
+            td(align="center" valign="top")
+              a(href=goodsLink target="_blank")
+                img(src=imageLink width="200")
+          tr
+            td(align="center" style="font-family: 'Nanum Gothic', sans-serif; font-weight: bold; font-size: 13px; padding-top: 5px;")
+              a(href=categoryLink target="_blank" style="text-decoration: none; color: orange;")=categoryName 
+          tr
+            td(align="center" valign="top" style="font-family: 'Muli', sans-serif; font-weight: 500; font-size: 16px; padding: 10px 0;")
+              a(href=goodsLink target="_blank" style="text-decoration: none; color: #000;")=goodsName 
+          tr
+            td(align="center" valign="top" style="font-family: 'Nanum Gothic', sans-serif; font-weight: 300; font-size: 13px;")
+              a(href=goodsLink target="_blank" style="text-decoration: none; color: #000; line-height: 20px;")=description 
+
+  table(align="center" valign="top" width="600" style="")
+    tr
+      td(align="center" valign="top" style="padding-bottom: 30px;")
+        a(href="http://s.godo.kr/k28m" target="_blank")
+          img(src="https://designbook-images.s3.ap-northeast-2.amazonaws.com/logo.png" width="110")
+
+    +row("http://s.godo.kr/nw86",
+      "http://s.godo.kr/k28s",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/brand.jpg",
+      "종합그래픽",
+      "BranD vol.50 I Want to Set up a Studio",
+      "BranD vol.50의 주제는 'I Want to Set up a Studio'입니다. BranD는 국내외 다양한 디자인 스튜디오의 디자이너 17명을 초대해 105개의 Q&A를 통해 자유롭게 표현할 수 있는 공간을 만드는 방법에 대한 인터뷰를 담았습니다.")
+    +row("http://s.godo.kr/nw87",
+      "http://s.godo.kr/k28s",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/jagda.jpg",
+      "종합그래픽",
+      "Graphic Design in Japan 2020 : JAGDA",
+      "1978년에 발족된 일본 그래픽 디자이너 협회 JAGDA는 일본 디자인 업계에서는 최대 규모를 자랑하는 단체입니다. 일본의 권위있는 디자인 협회에서 선정한 다양한 분야의 우수작을 통해 좋은 영감을 얻어 여러분의 디자인이 한층 더 업그레이드 되기를 바랍니다.")
+    +row("http://s.godo.kr/nw88",
+      "http://s.godo.kr/k28s",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/inter.jpg",
+      "종합그래픽",
+      "International Yearbook Brands & Communication Design 2019/2020",
+      "각 분야 최고의 디자인을 선정하는 디자인어워즈 Red dot Awards 2019/2020 수상작 모음집입니다.")
+    +row("http://s.godo.kr/nw8b",
+      "http://s.godo.kr/mjw6",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/world.jpg",
+      "BI,CI,LOGO / 타이포",
+      "World Logo & Mark",
+      "브랜드, 상품, 샵, 이벤트 등 로고는 보는 사람들에게 많은 이미지를 전달합니다. 로고에는 디자이너의 다양한 프로페셔널한 요소가 담겨 있습니다. 본 서적은 전 세계 20개국 60명 크리에이터의 248작품들이 소개되어 있습니다. ")
+    +row("http://s.godo.kr/nw8f",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/cafe.jpg",
+      "건축 / 인테리어",
+      "Cafe & Restaurant Design 2020",
+      "디자인 어워드 작품들과 카페, 레스토랑 등 최신 카페와 레스토랑 인테리어가 가득한 책 인테리어 디자이너와 카페 경영하시는 분들께 추천드립니다." )
+    +row("http://s.godo.kr/nw8h",
+      "http://s.godo.kr/mjw6",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/women.jpg",
+      "BI,CI,LOGO / 타이포",
+      "女性の心をつかむショップイメ-ジグラフィックス(Graphics from Shops for Women)",
+      "여성의 마음을 사로 잡는 100개의 샵 그래픽이 한 곳에 ! 여성들의 마음을 얻는 '예쁘고 맛있는 것'이 SNS의 붐을 일으켜 비즈니스를 성공시키는 중요한 열쇠라고 할 수 있습니다. 본 서적은 여성에게 주목받는 샵의 인테리어와 그래픽을 소개합니다.")
+    +row("http://s.godo.kr/nw8i",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/mies.jpg",
+      "건축 / 인테리어",
+      "Mies",
+      "20세기 가장 영향력 있는 건축가들 중 한 명인  Mies van der Rohe 의 건축 작품집입니다. 그의 건축의 명확성은 디자인은 물론 철학과 과학을 포함한 Mies의 다양성을 보여주며, Mertin의 엄격하고 이해하기 쉬운 텍스트는 독자들에게 디자인에 대한 지적 맥락뿐만 아니라 가장 중요한 모든 건물들에 대한 명확한 설명을 제공합니다.")
+    +row("http://s.godo.kr/nw8k",
+      "http://s.godo.kr/k293",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/virgil.jpg",
+      "패션",
+      "(재입고)Virgil Abloh: Figures of Speech",
+      "버질 아블로(Virgil Abloh)는 패션 레이블, 멀티 플랫폼 브랜드 개발, 가구 디자인,무라카미 다카시와의 공동 전시회 개최, Nike와의 파트너쉽 형성 등 가장 최근에는 루이비통에서 크리에이티브 디렉터로 임명되었습니다. 이 책은 스트리트 패션에서 하이 패션에 이르기까지 패션 디자이너 버질 아블로의 작품이 뮤지엄, 인텍스 ,아카이브 세 챕터로 나뉘어져 소개되어 있습니다.")
+    +row("http://s.godo.kr/nw8s",
+      "http://s.godo.kr/k290",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/nara.jpg",
+      "아트",
+      "Yoshitomo Nara",
+      "일본 네오 팝(Neo Pop) 세대의 대표작가. 커다란 둥근 얼굴에 반항심 어린 표정의 소녀와 강아지나 고양이 같은 귀여운 동물들이 등장하는 그의 예술은 우리 내면에 감춰진 두려움과 고독감, 반항심, 잔인함 등의 감정을 미묘하게 포착하고 있습니다. 본 서적은 30년동안의 그의 작품을 담아냈으며, 미술사학자 예완쿤이 집필하고 요시토모 나라의 그림, 조각, 도자기 분야의 가장 최근 작품까지 포함하고 있습니다. ")
+    +row("http://s.godo.kr/nw8t",
+      "http://s.godo.kr/k28v",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/gang.jpg",
+      "건축 / 인테리어",
+      "Studio Gang: Architecture",
+      "오늘날 가장 중요하고 현신적이며 창의적인 건축 중 가장 심도 있는 탐구 지난 20년동안 Jeanne Gang감독이 이끄는 스튜디오 강은 우리 시대의 시급한 사회 환경적 과제를 안고 있는 대담하고 비전적인 건축물을 만들어왔습니다. Studio Gang의 이 첫번째 책은 미국의 대표 25개 프로젝트를 모았습니다. ")
+    +row("http://s.godo.kr/nw94",
+      "http://s.godo.kr/k290",
+      "https://designbook-images.s3.ap-northeast-2.amazonaws.com/newsletter/202009/bosch.jpg",
+      "아트",
+      "Bosch. The Complete Works",
+      "후기 고딕 그리고 초기 르네상스 현실주의에 기운 예술 풍조가 만연한 가운데 , 네덜란드 화가 히에로니무스 보쉬(Hieronymus Bosch 1450-1516)는 단순한 변종 이상이었습니다. 보쉬의 작품들은 갖가지 인간적 욕망 , 판타지, 불안에 굴복한 공상의 생명체들이 등장하는 그로테스크한 장면들로 유명합니다. 본 서적은 TASCHEN의 새롭고 독점적인 디테일로 보스의 전 작품을 선보입니다.")
+
+
+
+
+
+
+
